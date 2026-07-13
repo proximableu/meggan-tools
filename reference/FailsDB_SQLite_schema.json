@@ -1,0 +1,270 @@
+{
+  "tables": [
+    {
+      "name": "FelSlutprov",
+      "creation_sql": "CREATE TABLE \"FelSlutprov\" (\"ID\" INTEGER NOT NULL, \"Datum\" TEXT, \"Produkt\" TEXT, \"TestatAv\" INTEGER, \"Serienummer\" INTEGER, \"Godk\u00e4nd utan fel\" TEXT, \"Felrapport/NCR skriven\" TEXT, \"Anv\u00e4nt NCR nr\" TEXT, \"Anv\u00e4nt NCR artnr\" TEXT, PRIMARY KEY (\"ID\"))",
+      "columns": [
+        {
+          "cid": 0,
+          "name": "ID",
+          "type": "INTEGER",
+          "notnull": true,
+          "default_value": null,
+          "is_primary_key": true
+        },
+        {
+          "cid": 1,
+          "name": "Datum",
+          "type": "TEXT",
+          "notnull": false,
+          "default_value": null,
+          "is_primary_key": false
+        },
+        {
+          "cid": 2,
+          "name": "Produkt",
+          "type": "TEXT",
+          "notnull": false,
+          "default_value": null,
+          "is_primary_key": false
+        },
+        {
+          "cid": 3,
+          "name": "TestatAv",
+          "type": "INTEGER",
+          "notnull": false,
+          "default_value": null,
+          "is_primary_key": false
+        },
+        {
+          "cid": 4,
+          "name": "Serienummer",
+          "type": "INTEGER",
+          "notnull": false,
+          "default_value": null,
+          "is_primary_key": false
+        },
+        {
+          "cid": 5,
+          "name": "Godk\u00e4nd utan fel",
+          "type": "TEXT",
+          "notnull": false,
+          "default_value": null,
+          "is_primary_key": false
+        },
+        {
+          "cid": 6,
+          "name": "Felrapport/NCR skriven",
+          "type": "TEXT",
+          "notnull": false,
+          "default_value": null,
+          "is_primary_key": false
+        },
+        {
+          "cid": 7,
+          "name": "Anv\u00e4nt NCR nr",
+          "type": "TEXT",
+          "notnull": false,
+          "default_value": null,
+          "is_primary_key": false
+        },
+        {
+          "cid": 8,
+          "name": "Anv\u00e4nt NCR artnr",
+          "type": "TEXT",
+          "notnull": false,
+          "default_value": null,
+          "is_primary_key": false
+        }
+      ],
+      "indexes": []
+    },
+    {
+      "name": "FelTabell",
+      "creation_sql": "CREATE TABLE \"FelTabell\" (\"ID\" INTEGER, \"Felk\u00e4lla\" TEXT, \"N\u00e4r uppt\u00e4cktes felet\" TEXT, \"Felbeskrivning\" TEXT, \"Artnr\" TEXT, \"Lev serienr\" TEXT, \"Kommentar\" TEXT, \"Tid\u00e5tg\u00e5ng\" REAL)",
+      "columns": [
+        {
+          "cid": 0,
+          "name": "ID",
+          "type": "INTEGER",
+          "notnull": false,
+          "default_value": null,
+          "is_primary_key": false
+        },
+        {
+          "cid": 1,
+          "name": "Felk\u00e4lla",
+          "type": "TEXT",
+          "notnull": false,
+          "default_value": null,
+          "is_primary_key": false
+        },
+        {
+          "cid": 2,
+          "name": "N\u00e4r uppt\u00e4cktes felet",
+          "type": "TEXT",
+          "notnull": false,
+          "default_value": null,
+          "is_primary_key": false
+        },
+        {
+          "cid": 3,
+          "name": "Felbeskrivning",
+          "type": "TEXT",
+          "notnull": false,
+          "default_value": null,
+          "is_primary_key": false
+        },
+        {
+          "cid": 4,
+          "name": "Artnr",
+          "type": "TEXT",
+          "notnull": false,
+          "default_value": null,
+          "is_primary_key": false
+        },
+        {
+          "cid": 5,
+          "name": "Lev serienr",
+          "type": "TEXT",
+          "notnull": false,
+          "default_value": null,
+          "is_primary_key": false
+        },
+        {
+          "cid": 6,
+          "name": "Kommentar",
+          "type": "TEXT",
+          "notnull": false,
+          "default_value": null,
+          "is_primary_key": false
+        },
+        {
+          "cid": 7,
+          "name": "Tid\u00e5tg\u00e5ng",
+          "type": "REAL",
+          "notnull": false,
+          "default_value": null,
+          "is_primary_key": false
+        }
+      ],
+      "indexes": []
+    },
+    {
+      "name": "TblArtRegister",
+      "creation_sql": "CREATE TABLE \"TblArtRegister\" (\"PRODUCT\" TEXT, \"DESCRIPTIO\" TEXT, \"EndUser\" REAL)",
+      "columns": [
+        {
+          "cid": 0,
+          "name": "PRODUCT",
+          "type": "TEXT",
+          "notnull": false,
+          "default_value": null,
+          "is_primary_key": false
+        },
+        {
+          "cid": 1,
+          "name": "DESCRIPTIO",
+          "type": "TEXT",
+          "notnull": false,
+          "default_value": null,
+          "is_primary_key": false
+        },
+        {
+          "cid": 2,
+          "name": "EndUser",
+          "type": "REAL",
+          "notnull": false,
+          "default_value": null,
+          "is_primary_key": false
+        }
+      ],
+      "indexes": []
+    },
+    {
+      "name": "TblProducts",
+      "creation_sql": "CREATE TABLE \"TblProducts\" (\"PRODUCT\" TEXT, \"DESCRIPTION\" TEXT, \"Team\" INTEGER, \"Routing\" REAL)",
+      "columns": [
+        {
+          "cid": 0,
+          "name": "PRODUCT",
+          "type": "TEXT",
+          "notnull": false,
+          "default_value": null,
+          "is_primary_key": false
+        },
+        {
+          "cid": 1,
+          "name": "DESCRIPTION",
+          "type": "TEXT",
+          "notnull": false,
+          "default_value": null,
+          "is_primary_key": false
+        },
+        {
+          "cid": 2,
+          "name": "Team",
+          "type": "INTEGER",
+          "notnull": false,
+          "default_value": null,
+          "is_primary_key": false
+        },
+        {
+          "cid": 3,
+          "name": "Routing",
+          "type": "REAL",
+          "notnull": false,
+          "default_value": null,
+          "is_primary_key": false
+        }
+      ],
+      "indexes": []
+    },
+    {
+      "name": "Team",
+      "creation_sql": "CREATE TABLE \"Team\" (\"ID\" INTEGER NOT NULL, \"Team\" TEXT, PRIMARY KEY (\"ID\"))",
+      "columns": [
+        {
+          "cid": 0,
+          "name": "ID",
+          "type": "INTEGER",
+          "notnull": true,
+          "default_value": null,
+          "is_primary_key": true
+        },
+        {
+          "cid": 1,
+          "name": "Team",
+          "type": "TEXT",
+          "notnull": false,
+          "default_value": null,
+          "is_primary_key": false
+        }
+      ],
+      "indexes": []
+    },
+    {
+      "name": "TestatAv",
+      "creation_sql": "CREATE TABLE \"TestatAv\" (\"ID\" INTEGER NOT NULL, \"Namn\" TEXT, PRIMARY KEY (\"ID\"))",
+      "columns": [
+        {
+          "cid": 0,
+          "name": "ID",
+          "type": "INTEGER",
+          "notnull": true,
+          "default_value": null,
+          "is_primary_key": true
+        },
+        {
+          "cid": 1,
+          "name": "Namn",
+          "type": "TEXT",
+          "notnull": false,
+          "default_value": null,
+          "is_primary_key": false
+        }
+      ],
+      "indexes": []
+    }
+  ]
+}
