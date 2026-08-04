@@ -78,7 +78,7 @@ def build_prompt(failure: str, solution: str) -> str:
     """Construct the evaluation prompt in Swedish."""
     return f"""Du är en teknisk expert som granskar underhållsloggar.
 Din uppgift är att bedöma om 'lösningen' faktiskt åtgärdar 'felet'.
-Om det är en genuin teknisk lösning, skriv om den till en mer detaljerad och beskrivande version på svenska.
+Om det är en genuin teknisk lösning, markera den som giltig.
 Om det bara är en statusnotering, lagerflytt, okänt fel, eller inte en verklig lösning, markera det som ogiltigt.
 
 Felbeskrivning: {failure}
@@ -87,7 +87,7 @@ Lösning: {solution}
 Svara endast med JSON enligt följande schema:
 {{
   "is_valid": boolean,
-  "enhanced_solution": "string eller null",
+  "enhanced_solution": {solution},
   "reasoning": "string"
 }}"""
 
